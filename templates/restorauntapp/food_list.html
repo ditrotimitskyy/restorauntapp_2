@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>ЇЖА</h1>
+<ul>
+
+{% for dish in food_list %}
+    <li>{{ food.category }} - 
+{{food.name}}</li>
+{% empty %}
+    <li> страви ще не готові </li>
+{% endfor %}
+</ul>
+{% endblock %}
