@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>{{food.title}}</h1>
+<p>{{food.content}}</p>
+{% if food.food_pic %}
+<img src="{{food.food_pic.url}}" alt="{{food.food_pic}}" height="500px">
+{% endif %}
+
+{% endblock content %}  

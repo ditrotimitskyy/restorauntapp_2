@@ -5,10 +5,14 @@
 <ul>
 
 {% for dish in food_list %}
-    <li>{{ food.category }} - 
-{{food.name}}</li>
+    <li>{{ dish.category }} - 
+
+<a href="{% url 'food-description' dish.pk %}">{{ dish.title }}</a> 
+
+</li>
 {% empty %}
     <li> страви ще не готові </li>
 {% endfor %}
+
 </ul>
 {% endblock %}

@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for dish in food_list %}
+<h3>{{dish.title}}</h3>
+<p>{{dish.content}}</p>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,17 @@
+
+{% block content %}
+<h1>категорії</h1>
+<ul>
+
+{% for category in category_list %}
+    <li> 
+
+<a href="{% url 'category-detail' category.pk %}">{{ category.title }}</a> 
+
+</li>
+{% empty %}
+    <li> категрій нема </li>
+{% endfor %}
+
+</ul>
+{% endblock %}
