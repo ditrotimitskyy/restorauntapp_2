@@ -21,3 +21,11 @@ class Food(models.Model):
         ]
     def __str__(self):
         return self.title
+    
+class Order(models.Model):
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    food = models.ForeignKey(Food, on_delete=models.SET_NULL, null=True)
+    adress = models.CharField(max_length=200)
+    amount = models.IntegerField()
+    datetime = models.DateField(auto_now_add=True)

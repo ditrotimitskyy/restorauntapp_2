@@ -2,10 +2,15 @@
 
 {% block content %}
 
-<h1>{{food.title}}</h1>
-<p>{{food.content}}</p>
-{% if food.food_pic %}
-<img src="{{food.food_pic.url}}" alt="{{food.food_pic}}" height="500px">
-{% endif %}
+<div class="card my-card" style="width: 30rem;">
+    {% if food.food_pic %}
+    <img src="{{food.food_pic.url}}" class="card-img-top" alt="{{food.food_pic}}">
+    {% endif %}
+    <div class="card-body">
+      <h4 class="card-title">{{food.title}}</h4>
+      <p class="card-text">{{food.content}}</p>
+      <a href="{% url 'order' %}" class="btn btn-primary">замовити</a>
+    </div>
+  </div>
 
 {% endblock content %}  

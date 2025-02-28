@@ -8,12 +8,12 @@ from django.urls import reverse_lazy,reverse
 class UserCreateView(CreateView):
     model = User
     template_name = 'registration/signup.html'
-    success_url = reverse_lazy("dish-list")
+    success_url = reverse_lazy("food-list")
     form_class = UserCreationForm
 
     def form_valid(self, form):
         form.save()
         user = form.instance
         login(self.request, user)
-        return redirect(reverse("dish-list"))
+        return redirect(reverse("food-list"))
     

@@ -1,3 +1,10 @@
-.nav-item-account{
-    margin-left: 75%;
+.right{
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-right: 5px;
+    float: right;
+}
+
+.my-card{
+    margin : auto;
 }
